@@ -3,7 +3,7 @@ var timeEl = document.querySelector(".time");
 // Selects element by id
 var mainEl = document.getElementById("main");
 
-var secondsLeft = 20;
+var secondsLeft = 55;
 
 function setTime() {
   // Sets interval in variable
@@ -39,7 +39,7 @@ displayQuestions(counter);
 }
 function displayQuestions(arg) {
   if(counter==Questions.length){
-    alert("end of quiz")
+    prompt("Great job! please enter your initials")
   }
   var questionsDiv = document.getElementById("question");
   questionsDiv.innerHTML = Questions[arg].question;

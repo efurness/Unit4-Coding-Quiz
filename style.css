@@ -23,7 +23,7 @@ body {
     width: 80wh;
     height: 80vh;
     justify-content: center;
-    font-size: x-large;
+    font-size: large;
     text-align: center;
     color: white;
     background-color: steelblue;
@@ -33,7 +33,7 @@ body {
     margin: 10px;
     padding: 5px;
     width: 80wh;
-    height: 10vh;
+    height: 40vh;
     background-color:rgb(5, 5, 110);
     font-size: x-large;
     text-align: center;
