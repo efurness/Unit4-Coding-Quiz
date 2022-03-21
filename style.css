@@ -33,7 +33,7 @@ body {
     margin: 10px;
     padding: 5px;
     width: 80wh;
-    height: 40vh;
+    height: 10vh;
     background-color:rgb(5, 5, 110);
     font-size: x-large;
     text-align: center;
@@ -48,7 +48,7 @@ body {
     justify-items: center;
     border-radius: 25%;
     color: white;
-    padding: 15px 15px;
+    padding: 15px 32px;
     width: 100px;
     height: 50px;
     text-align: center;
@@ -58,7 +58,7 @@ body {
 }
 
 .navigation {
-    width: 80vw;
+    width: 80wh;
     height: 10vh;
     margin: 10px;
     padding: 5px;
@@ -79,4 +79,11 @@ body {
 .next:hover {
     background-color: rgb(225, 0, 255);
     color: #2d2fb8;
+}
+.select {
+    border: midnightblue;
+    border-radius: 50%;
+    
+    
+
 }

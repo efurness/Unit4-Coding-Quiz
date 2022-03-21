@@ -1,11 +1,15 @@
+
+
 var timeEl = document.querySelector(".time");
 
 // Selects element by id
 var mainEl = document.getElementById("main");
 
-var secondsLeft = 55;
+var secondsLeft 
 
+var score = 0;
 function setTime() {
+  secondsLeft = 30
   // Sets interval in variable
   var timerInterval = setInterval(function () {
     secondsLeft--;
@@ -39,21 +43,37 @@ displayQuestions(counter);
 }
 function displayQuestions(arg) {
   if(counter==Questions.length){
-    prompt("Great job! please enter your initials")
-    return;
+    var initials = prompt("Great job! please enter your initials");
+    alert(initials + ":"+ score);
+    
   }
   var questionsDiv = document.getElementById("question");
   questionsDiv.innerHTML = Questions[arg].question;
   var ul = document.createElement("div");
   ul.innerHTML = `
-  <button value="${Questions[arg].a[0].isCorrect}">${Questions[arg].a[0].text}</button>
-  <button value="${Questions[arg].a[1].isCorrect}">${Questions[arg].a[1].text}</button>
-  <button value="${Questions[arg].a[2].isCorrect}">${Questions[arg].a[2].text}</button>
-  <button value="${Questions[arg].a[3].isCorrect}">${Questions[arg].a[3].text}</button>
+  <button class="multiple"value="${Questions[arg].a[0].isCorrect}">${Questions[arg].a[0].text}</button>
+  <button class="multiple"value="${Questions[arg].a[1].isCorrect}">${Questions[arg].a[1].text}</button>
+  <button class="multiple"value="${Questions[arg].a[2].isCorrect}">${Questions[arg].a[2].text}</button>
+  <button class="multiple"value="${Questions[arg].a[3].isCorrect}">${Questions[arg].a[3].text}</button>
   `
 questionsDiv.appendChild(ul);
+var multiple = document.getElementsByClassName("multiple");
+for (let index = 0; index < multiple.length; index++) {
+multiple[index].addEventListener("click",checkAnswer);
   
 }
+  
+}
+function checkAnswer(event) {
+console.log(event.target.value);
+if(event.target.value=="true") {
+  score++
+}
+else {
+  secondsLeft-=5
+}
+}
+
 
 const next = document.getElementsByClassName('next')[0];
 var id = 0;
@@ -67,7 +87,7 @@ displayQuestions(counter)
 const Questions = [
   {
   id: 0,
-  question: "what is a class in CSS?",
+  question: "WHAT IS A CLASS IN CSS?",
   a: [{ text: "attribute", isCorrect: true },
   { text: "boolean", isCorrect: false },
   { text: "English", isCorrect: false },
@@ -77,7 +97,7 @@ const Questions = [
 },
 {
   id: 1,
-  question: "what is JSON?",
+  question: "WHAT IS JSON?",
   a: [{ text: "closed source", isCorrect: false },
   { text: "open standard file format in web applications", isCorrect: true },
   { text: "former boyfriend", isCorrect: false },
@@ -87,7 +107,7 @@ const Questions = [
 },
 {
   id: 2,
-  question: "what is Bootstrap",
+  question: "WHAT IS BOOTSTRAP?",
   a: [{ text: "a piece or leather ", isCorrect: true },
   { text: "a popular library of code for websites", isCorrect: true },
   { text: "pull yourself up with them", isCorrect: false },
@@ -96,7 +116,7 @@ const Questions = [
 },
 {
   id: 3,
-  question: "what is flexbox",
+  question: "WHAT IS FLEXBOX?",
   a: [{ text: "allows for a flexble container in websites to fit page", isCorrect: true },
   { text: "what you can't do after 50", isCorrect: false },
   { text: "a dance in the 70s'", isCorrect: false },
