@@ -45,50 +45,8 @@ var score = 0;
 // The startQuiz function is called when the startQuiz button is clicked
 
  // Questions that will be asked
-    const Questions = [
-        {
-        id: 0,
-        question: "what is a class in CSS?",
-        a: [{ text: "attribute", isCorrect: true },
-        { text: "boolean", isCorrect: false },
-        { text: "English", isCorrect: false },
-        { text: "style in css", isCorrect: false }
-        ]
-
-    },
-    {
-        id: 1,
-        q: "what is JSON?",
-        a: [{ text: "closed source", isCorrect: false },
-        { text: "open standard file format in web applications", isCorrect: true },
-        { text: "former boyfriend", isCorrect: false },
-        { text: "logo", isCorrect: false }
-        ]
-
-    },
-    {
-        id: 2,
-        q: "what is Bootstrap",
-        a: [{ text: "a piece or leather ", isCorrect: true },
-        { text: "a popular library of code for websites", isCorrect: true },
-        { text: "pull yourself up with them", isCorrect: false },
-        { text: "a brewery in Devide, Colorado", isCorrect: false }
-        ]
-    },
-    {
-        id: 3,
-        q: "what is flexbox",
-        a: [{ text: "allows for a flexble container in websites to fit page", isCorrect: true },
-        { text: "what you can't do after 50", isCorrect: false },
-        { text: "a dance in the 70s'", isCorrect: false },
-        { text: "a logo", isCorrect: false }]}
-        ]
-var startButton = document.getElementById("start-button");
-startButton.addEventListener("click", startQuiz)
-function startQuiz() {
-    setTime();
-
-}
+    
+   
 // set start
         var start = true;
 // Iterate, 
@@ -218,15 +176,4 @@ iterate("0");
 }
 
 // Next button and method
-const next = document.getElementsByClassName('next')[0];
-var id = 0;
 
-next.addEventListener("click", () => {
-start = false;
-if (id < 2) {
-    id++;
-    iterate(id);
-    console.log(id);
-}
-
-})

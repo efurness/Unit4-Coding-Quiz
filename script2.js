@@ -40,6 +40,7 @@ displayQuestions(counter);
 function displayQuestions(arg) {
   if(counter==Questions.length){
     prompt("Great job! please enter your initials")
+    return;
   }
   var questionsDiv = document.getElementById("question");
   questionsDiv.innerHTML = Questions[arg].question;
