@@ -2,7 +2,7 @@
 
 ### Description 
 
-This project involved making a coding quiz using Javascript.  For the user it is important to establish the length the password and then ask them the type of characters they want, either lower case or upper case letters or symbols or numbers.  In addition, have conditional statements to guide the user along the way with window dialog prompts, alerts and confirm statements.  Prompts notify the user. Alerts can be used here to let the user know they entered the wrong value outside the parameters of the length of the password, in this example, less than 8 or over 128 characters. Window method confirms are just to verify what the user wants, usually true or false and click OK.  If cancel button is clicked it will return null.  
+This project involved making a coding quiz using Javascript.   An html displays an initial webpage with a timer followed by a panel with a question box with Coding Quiz. Below is a start button and next button.  The timer shows seconds left for the user using an setInterval function and starts when user clicks the start button. Each question is stored in the javascript which then presents with a list of options that the user clicks followed by clicking the next button. For each question, the values for each question are stored in an inner html div element within the javascript and a ul list item below the question. Javascript is actually creating the elements on the page as they come up.  The script records each option and at the end of the quiz a pop up window prompt appears for the test taker to enter their intials followed by another pop up window alert with their initials and score.  These are stored using local storage set item.   
 
 
 ## Review
@@ -13,7 +13,7 @@ https://efurness.github.io/Unit4-WebAPI-Code-Quiz/
 [GitHub Repository] 
 https://github.com/efurness/Unit4-WebAPI-Code-Quiz.git
 
-[Project screenshot](password_generator.png) 
+[Project screenshot](quiz.png) 
 
 ## Contact
 
@@ -23,9 +23,8 @@ Ellen Furness - [Ellen.Furness@du.edu]
 
 List of resources and websites
 
-* [Dev community](https://dev.to/)
-* [W3 Resource](https://www.w3resource.com/)
-* [GeeksforGeeks JavaScript Dialog boxes](https://geeksforgeeks.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Bootcamp Resources](https://bootcamp-resources.netlify.app/)
+* [GeeksforGeeks](https://geeksforgeeks.com/)
 * [Tutor](https://bootcampspot.com/)
-* [Code Academy](https://www.codecademy.com/)
-
+* [Mozilla](https://developer.mozilla.org/en-US//)
