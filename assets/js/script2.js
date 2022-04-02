@@ -30,7 +30,7 @@ function setTime() {
 function sendMessage() {
   timeEl.textContent = "time is up! ";
   var imgEl = document.createElement("img");
-  imgEl.setAttribute("src", "canoe.png");
+  imgEl.setAttribute("src", "assets/images/canoe.png");
   mainEl.appendChild(imgEl);
 
 }
